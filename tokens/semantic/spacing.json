@@ -1,0 +1,17 @@
+{
+  "space": {
+    "component": {
+      "xs":  { "value": "{spacing.1}" },
+      "sm":  { "value": "{spacing.2}" },
+      "md":  { "value": "{spacing.4}" },
+      "lg":  { "value": "{spacing.6}" },
+      "xl":  { "value": "{spacing.8}" }
+    },
+    "layout": {
+      "sm":  { "value": "{spacing.8}" },
+      "md":  { "value": "{spacing.12}" },
+      "lg":  { "value": "{spacing.16}" },
+      "xl":  { "value": "{spacing.24}" }
+    }
+  }
+}
