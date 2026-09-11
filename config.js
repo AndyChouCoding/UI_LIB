@@ -2,8 +2,7 @@ const StyleDictionary = require('style-dictionary');
 
 module.exports = {
   source: [
-    'tokens/core/**/*.json',
-    'tokens/semantic/**/*.json'
+    'tokens/**/*.json'
   ],
   platforms: {
     css: {
@@ -43,8 +42,26 @@ module.exports = {
           format: 'javascript/es6'
         },
         {
+          destination: 'tokens.cjs',
+          format: 'javascript/module'
+        },
+        {
           destination: 'tokens.d.ts',
           format: 'typescript/es6-declarations'
+        }
+      ]
+    },
+    json: {
+      transformGroup: 'js',
+      buildPath: 'build/json/',
+      files: [
+        {
+          destination: 'tokens.json',
+          format: 'json/nested'
+        },
+        {
+          destination: 'tokens.flat.json',
+          format: 'json/flat'
         }
       ]
     }
