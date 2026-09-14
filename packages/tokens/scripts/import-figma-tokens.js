@@ -5,17 +5,17 @@ const projectRoot = path.resolve(__dirname, '..');
 const defaultSource = '/Users/fulishijin/Desktop/Colors.tokens.json';
 const sourceFile = path.resolve(process.argv[2] || defaultSource);
 
-// 目前唯一的 brand/theme 組合，之後多品牌時改成從參數或設定檔讀取。
-const BRAND = 'primary';
-const THEME = 'light';
-
-const coreOutputFile = path.join(projectRoot, 'tokens', 'core', 'color.json');
+const primitiveOutputFile = path.join(
+  projectRoot,
+  'tokens',
+  'primitive',
+  'color.tokens.json'
+);
 const semanticOutputFile = path.join(
   projectRoot,
   'tokens',
   'semantic',
-  BRAND,
-  `${THEME}.json`
+  'color.tokens.json'
 );
 
 function componentToHex(value) {
@@ -89,17 +89,28 @@ if (!fs.existsSync(sourceFile)) {
 }
 
 const figmaTokens = JSON.parse(fs.readFileSync(sourceFile, 'utf8'));
-const { bg, ...coreGroups } = normalizeNode(figmaTokens);
+// "bg" is the only semantic (usage-scoped) group Figma currently exports;
+// everything else is a primitive color scale. Note: Figma is exporting bg.*
+// as fully resolved hex values, not variable aliases, so this script cannot
+// tell which semantic values are meant to reference a primitive — that has
+// to be set up as an alias in Figma's Variables panel first.
+const { bg: background, ...primitiveGroups } = normalizeNode(figmaTokens);
 
-fs.mkdirSync(path.dirname(coreOutputFile), { recursive: true });
-fs.writeFileSync(coreOutputFile, `${JSON.stringify({ color: coreGroups }, null, 2)}\n`);
+fs.mkdirSync(path.dirname(primitiveOutputFile), { recursive: true });
+fs.writeFileSync(
+  primitiveOutputFile,
+  `${JSON.stringify({ color: primitiveGroups }, null, 2)}\n`
+);
 console.log(`Imported ${sourceFile}`);
-console.log(`Wrote ${path.relative(projectRoot, coreOutputFile)}`);
+console.log(`Wrote ${path.relative(projectRoot, primitiveOutputFile)}`);
 
-if (bg) {
+if (background) {
   fs.mkdirSync(path.dirname(semanticOutputFile), { recursive: true });
-  fs.writeFileSync(semanticOutputFile, `${JSON.stringify({ color: { bg } }, null, 2)}\n`);
+  fs.writeFileSync(
+    semanticOutputFile,
+    `${JSON.stringify({ color: { background } }, null, 2)}\n`
+  );
   console.log(`Wrote ${path.relative(projectRoot, semanticOutputFile)}`);
 } else {
-  console.warn(`No "bg" group found in source — skipped writing semantic/${BRAND}/${THEME}.json`);
+  console.warn('No "bg" group found in source — skipped writing tokens/semantic/color.tokens.json');
 }

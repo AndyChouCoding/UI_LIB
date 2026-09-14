@@ -1,0 +1,38 @@
+{
+  "color": {
+    "background": {
+      "primary": {
+        "type": "color",
+        "value": "#ffffff",
+        "comment": "No matching primitive yet (near-white); revisit once a neutral-50 primitive exists."
+      },
+      "secondary": {
+        "type": "color",
+        "value": "{color.neutral.100.value}"
+      },
+      "tertiary": {
+        "type": "color",
+        "value": "{color.neutral.200.value}"
+      },
+      "inverse": {
+        "type": "color",
+        "value": "{color.primary.800.value}"
+      },
+      "overlay-light": {
+        "type": "color",
+        "value": "#f8f9fb",
+        "comment": "No matching primitive yet (near-white); revisit once a neutral-50 primitive exists."
+      },
+      "surface": {
+        "type": "color",
+        "value": "#ffffff",
+        "comment": "No matching primitive yet (near-white); revisit once a neutral-50 primitive exists."
+      },
+      "surface-raised": {
+        "type": "color",
+        "value": "#fafbfc",
+        "comment": "No matching primitive yet (near-white); revisit once a neutral-50 primitive exists."
+      }
+    }
+  }
+}

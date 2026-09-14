@@ -1,3 +1,6 @@
+# Publishes packages/tokens on every GitHub Release. Once packages/ui exists,
+# this will need to target the specific package being released instead of
+# always publishing packages/tokens.
 name: Publish Package
 
 on:
@@ -22,7 +25,7 @@ jobs:
           scope: '@andychoucoding'
 
       - run: npm ci
-      - run: npm run build
-      - run: npm publish
+      - run: npm run build --workspace=packages/tokens
+      - run: npm publish --workspace=packages/tokens
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

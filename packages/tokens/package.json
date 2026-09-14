@@ -1,0 +1,39 @@
+{
+  "name": "@andychoucoding/tokens",
+  "version": "1.0.0",
+  "description": "Design token system powered by Style Dictionary (Primitive + Semantic layers)",
+  "main": "dist/js/tokens.cjs",
+  "module": "dist/js/tokens.js",
+  "types": "dist/js/tokens.d.ts",
+  "scripts": {
+    "import:figma": "node scripts/import-figma-tokens.js",
+    "build": "style-dictionary build --config style-dictionary.config.mjs",
+    "prepare:package": "npm run import:figma && npm run build",
+    "watch": "nodemon --watch tokens --ext json --exec 'npm run build'"
+  },
+  "keywords": [
+    "design-tokens",
+    "style-dictionary"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "files": [
+    "dist",
+    "tokens"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AndyChouCoding/UI_LIB.git",
+    "directory": "packages/tokens"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "dependencies": {
+    "style-dictionary": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

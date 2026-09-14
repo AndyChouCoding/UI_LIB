@@ -1,38 +1,8 @@
 {
-  "name": "@andychoucoding/design-tokens",
-  "version": "1.0.0",
-  "description": "Design token system powered by Style Dictionary",
-  "main": "build/js/primary/light/tokens.cjs",
-  "module": "build/js/primary/light/tokens.js",
-  "types": "build/js/primary/light/tokens.d.ts",
-  "scripts": {
-    "import:figma": "node scripts/import-figma-tokens.js",
-    "build": "node scripts/build-tokens.js",
-    "prepare:package": "npm run import:figma && npm run build",
-    "watch": "nodemon --watch tokens --ext json --exec 'npm run build'"
-  },
-  "keywords": [
-    "design-tokens",
-    "style-dictionary"
-  ],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "files": [
-    "build",
-    "tokens"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AndyChouCoding/design-tokens.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
-  "dependencies": {
-    "style-dictionary": "^4.4.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
-  }
+  "name": "ui-lib",
+  "private": true,
+  "description": "Company design system monorepo — design tokens and MUI-based component library",
+  "workspaces": [
+    "packages/*"
+  ]
 }
