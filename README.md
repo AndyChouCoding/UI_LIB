@@ -31,17 +31,21 @@ GitHub Packages → Product A / B / C
 5. Product 只依賴 `@andychoucoding/ui`，不直接 import MUI component。
 6. Token 與 UI Framework 各自獨立發布 package。
 
-## Packages
+## Packages / Apps
 
 ```
 packages/
-  tokens/    # @andychoucoding/tokens — Primitive/Semantic design tokens（Style Dictionary）
-  ui/        # @andychoucoding/ui — Company Theme + Components（規劃中，尚未建立）
+  tokens/       # @andychoucoding/tokens — Primitive/Semantic design tokens（Style Dictionary）
+  ui/           # @andychoucoding/ui — Company Theme + Components（MUI implementation layer）
+apps/
+  storybook/    # 元件文件 + Figma 連結
 ```
 
 每個 package 的細節見各自的 README：
 
 - [`packages/tokens/README.md`](packages/tokens/README.md)
+- [`packages/ui/README.md`](packages/ui/README.md)
+- [`apps/storybook/README.md`](apps/storybook/README.md)
 
 ## 開發
 
@@ -57,5 +61,6 @@ npm run build --workspace=packages/tokens
 對應公司 design system 架構文件的階段規劃：
 
 - **Phase 1（完成）**：Color token PoC，驗證 Figma → Style Dictionary → CSS 可行
-- **Phase 2（目前）**：`packages/tokens` Primitive/Semantic 分層，發布 `@andychoucoding/tokens@1.0.0`
-- **Phase 3+（規劃中）**：`packages/ui`（Company MUI Theme + Components）、Storybook、CI 治理（lint/typecheck/test/visual regression）
+- **Phase 2（完成）**：`packages/tokens` Primitive/Semantic 分層，準備發布 `@andychoucoding/tokens@1.0.0`
+- **Phase 3/4（目前）**：`packages/ui`（Company MUI Theme + 9 個元件：Button/Input/Select/Checkbox/Switch/Dialog/Table/Tabs/Tooltip）、`apps/storybook`（含 Figma 連結預留欄位）
+- **Phase 5+（規劃中）**：`@andychoucoding/ui` 正式發布、CI 治理（lint/typecheck/test/visual regression）、其他元件與 semantic token 類別擴充

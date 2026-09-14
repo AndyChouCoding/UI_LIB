@@ -3,6 +3,7 @@
   "private": true,
   "description": "Company design system monorepo — design tokens and MUI-based component library",
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ]
 }
