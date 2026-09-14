@@ -2,12 +2,12 @@
   "name": "@andychoucoding/design-tokens",
   "version": "1.0.0",
   "description": "Design token system powered by Style Dictionary",
-  "main": "build/js/tokens.cjs",
-  "module": "build/js/tokens.js",
-  "types": "build/js/tokens.d.ts",
+  "main": "build/js/primary/light/tokens.cjs",
+  "module": "build/js/primary/light/tokens.js",
+  "types": "build/js/primary/light/tokens.d.ts",
   "scripts": {
     "import:figma": "node scripts/import-figma-tokens.js",
-    "build": "style-dictionary build --config config.js",
+    "build": "node scripts/build-tokens.js",
     "prepare:package": "npm run import:figma && npm run build",
     "watch": "nodemon --watch tokens --ext json --exec 'npm run build'"
   },
