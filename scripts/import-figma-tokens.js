@@ -4,7 +4,19 @@ const path = require('node:path');
 const projectRoot = path.resolve(__dirname, '..');
 const defaultSource = '/Users/fulishijin/Desktop/Colors.tokens.json';
 const sourceFile = path.resolve(process.argv[2] || defaultSource);
-const outputFile = path.join(projectRoot, 'tokens', 'core', 'color.json');
+
+// 目前唯一的 brand/theme 組合，之後多品牌時改成從參數或設定檔讀取。
+const BRAND = 'primary';
+const THEME = 'light';
+
+const coreOutputFile = path.join(projectRoot, 'tokens', 'core', 'color.json');
+const semanticOutputFile = path.join(
+  projectRoot,
+  'tokens',
+  'semantic',
+  BRAND,
+  `${THEME}.json`
+);
 
 function componentToHex(value) {
   return Math.round(value * 255)
@@ -77,12 +89,17 @@ if (!fs.existsSync(sourceFile)) {
 }
 
 const figmaTokens = JSON.parse(fs.readFileSync(sourceFile, 'utf8'));
-const styleDictionaryTokens = {
-  color: normalizeNode(figmaTokens),
-};
+const { bg, ...coreGroups } = normalizeNode(figmaTokens);
 
-fs.mkdirSync(path.dirname(outputFile), { recursive: true });
-fs.writeFileSync(outputFile, `${JSON.stringify(styleDictionaryTokens, null, 2)}\n`);
-
+fs.mkdirSync(path.dirname(coreOutputFile), { recursive: true });
+fs.writeFileSync(coreOutputFile, `${JSON.stringify({ color: coreGroups }, null, 2)}\n`);
 console.log(`Imported ${sourceFile}`);
-console.log(`Wrote ${path.relative(projectRoot, outputFile)}`);
+console.log(`Wrote ${path.relative(projectRoot, coreOutputFile)}`);
+
+if (bg) {
+  fs.mkdirSync(path.dirname(semanticOutputFile), { recursive: true });
+  fs.writeFileSync(semanticOutputFile, `${JSON.stringify({ color: { bg } }, null, 2)}\n`);
+  console.log(`Wrote ${path.relative(projectRoot, semanticOutputFile)}`);
+} else {
+  console.warn(`No "bg" group found in source — skipped writing semantic/${BRAND}/${THEME}.json`);
+}
