@@ -4,6 +4,7 @@
 ### Added
 - Company Theme：以 `@andychoucoding/tokens` 為基礎的 MUI theme（`src/theme/theme.ts`、`src/theme/palette.ts`）
 - MUI Inputs 分類薄封裝：Autocomplete、Fab、IconButton、Radio（+ RadioGroup）、Rating、Slider、ToggleButton（+ ToggleButtonGroup）
+- MUI Data Display 分類薄封裝：Avatar（+ AvatarGroup）、Badge、Chip、Divider、List（+ ListItem/ListItemButton/ListItemIcon/ListItemText/ListItemAvatar/ListSubheader）、Typography
 - 9 個 Company Component（MUI implementation layer，封裝後以 Company Component API 對外暴露）：
   - Button
   - Input

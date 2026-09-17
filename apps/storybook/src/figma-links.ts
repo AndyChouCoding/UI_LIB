@@ -22,6 +22,12 @@ export const FIGMA_LINKS: Record<string, string> = {
   Rating: '',
   Slider: '',
   ToggleButton: '',
+  Avatar: '',
+  Badge: '',
+  Chip: '',
+  Divider: '',
+  List: '',
+  Typography: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
