@@ -20,6 +20,7 @@ MUI (pinned to 9.4.0)
   - **Surfaces**：Accordion 系列、AppBar、Card 系列、Paper、Toolbar
   - **Navigation**：Tabs、Breadcrumbs、Drawer、Link、Menu、Pagination、Popover、Stepper 系列
   - **Layout**：Box、Container、Grid、Stack（polymorphic `component` prop 元件，直接 alias 匯出以保留 root element 泛型型別，見對應檔案的註解）
+  - **MUI X（Community，MIT 免費版）**：DataGrid、DatePicker / TimePicker / DateTimePicker（+ LocalizationProvider、AdapterDayjs）——用到日期選擇器時記得在 app 根層包一次 `LocalizationProvider dateAdapter={AdapterDayjs}`
 
 ## Company Theme
 
