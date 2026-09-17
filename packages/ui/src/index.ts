@@ -17,3 +17,10 @@ export * from './Radio';
 export * from './Rating';
 export * from './Slider';
 export * from './ToggleButton';
+
+export * from './Avatar';
+export * from './Badge';
+export * from './Chip';
+export * from './Divider';
+export * from './List';
+export * from './Typography';
