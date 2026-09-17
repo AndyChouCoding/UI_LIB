@@ -30,3 +30,9 @@ export * from './CircularProgress';
 export * from './LinearProgress';
 export * from './Skeleton';
 export * from './Snackbar';
+
+export * from './Accordion';
+export * from './AppBar';
+export * from './Card';
+export * from './Paper';
+export * from './Toolbar';

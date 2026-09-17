@@ -33,6 +33,11 @@ export const FIGMA_LINKS: Record<string, string> = {
   LinearProgress: '',
   Skeleton: '',
   Snackbar: '',
+  Accordion: '',
+  AppBar: '',
+  Card: '',
+  Paper: '',
+  Toolbar: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
