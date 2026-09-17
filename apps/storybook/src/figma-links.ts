@@ -28,6 +28,11 @@ export const FIGMA_LINKS: Record<string, string> = {
   Divider: '',
   List: '',
   Typography: '',
+  Alert: '',
+  CircularProgress: '',
+  LinearProgress: '',
+  Skeleton: '',
+  Snackbar: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
