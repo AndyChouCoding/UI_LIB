@@ -10,6 +10,7 @@ Package-level details live in each package's own CHANGELOG
 - `apps/storybook`：對應 9 個元件的 Storybook stories，含 Colors foundation story 與 Figma 連結預留欄位（`figma-links.ts`）
 - Root `package.json` 接上 npm workspaces（`packages/*`、`apps/*`），monorepo 可統一安裝與建置
 - `apps/storybook`：Button story 加上 startIcon / endIcon 的可選 icon 控制項（`@mui/icons-material`）
+- `packages/ui` + `apps/storybook`：補齊 MUI Inputs 分類元件——Autocomplete、Fab、IconButton、Radio（+ RadioGroup）、Rating、Slider、ToggleButton（+ ToggleButtonGroup），各附 Storybook story
 
 ### Fixed
 

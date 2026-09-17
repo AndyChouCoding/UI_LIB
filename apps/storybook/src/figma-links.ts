@@ -15,6 +15,13 @@ export const FIGMA_LINKS: Record<string, string> = {
   Table: '',
   Tabs: '',
   Tooltip: '',
+  Autocomplete: '',
+  Fab: '',
+  IconButton: '',
+  Radio: '',
+  Rating: '',
+  Slider: '',
+  ToggleButton: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
