@@ -36,3 +36,11 @@ export * from './AppBar';
 export * from './Card';
 export * from './Paper';
 export * from './Toolbar';
+
+export * from './Breadcrumbs';
+export * from './Drawer';
+export * from './Link';
+export * from './Menu';
+export * from './Pagination';
+export * from './Popover';
+export * from './Stepper';

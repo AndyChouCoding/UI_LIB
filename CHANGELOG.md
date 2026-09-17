@@ -14,6 +14,7 @@ Package-level details live in each package's own CHANGELOG
 - `packages/ui` + `apps/storybook`：補齊 MUI Data Display 分類元件——Avatar（+ AvatarGroup）、Badge、Chip、Divider、List 系列、Typography，各附 Storybook story
 - `packages/ui` + `apps/storybook`：補齊 MUI Feedback 分類元件——Alert（+ AlertTitle）、CircularProgress、LinearProgress、Skeleton、Snackbar（+ SnackbarContent），各附 Storybook story
 - `packages/ui` + `apps/storybook`：補齊 MUI Surfaces 分類元件——Accordion 系列、AppBar、Card 系列、Paper、Toolbar，各附 Storybook story
+- `packages/ui` + `apps/storybook`：補齊 MUI Navigation 分類元件——Breadcrumbs、Drawer、Link、Menu、Pagination、Popover、Stepper 系列，各附 Storybook story
 
 ### Fixed
 
