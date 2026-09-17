@@ -1,8 +1,8 @@
 import type { PaletteOptions } from '@mui/material/styles';
 import {
   ColorPrimary300,
-  ColorPrimary500,
-  ColorPrimary700,
+  ColorPrimary800,
+  ColorPrimary900,
   ColorSecondary300,
   ColorSecondary500,
   ColorSecondary700,
@@ -28,11 +28,14 @@ import {
 /**
  * Primitive -> MUI palette mapping.
  * Convention: the 500 step is `main`, 300 is `light`, 700 is `dark`.
+ * Primary is an intentional exception: `main` uses 800 (darker/more
+ * saturated brand tone), so light/dark shift to 300/900 to keep the
+ * light < main < dark ordering.
  * This is a starting convention, not a value from Figma — revisit once
  * `action.*` semantic tokens exist and should take over this mapping.
  */
 export const palette: PaletteOptions = {
-  primary: { light: ColorPrimary300, main: ColorPrimary500, dark: ColorPrimary700 },
+  primary: { light: ColorPrimary300, main: ColorPrimary800, dark: ColorPrimary900 },
   secondary: { light: ColorSecondary300, main: ColorSecondary500, dark: ColorSecondary700 },
   success: { light: ColorSuccess300, main: ColorSuccess500, dark: ColorSuccess700 },
   warning: { light: ColorWarning300, main: ColorWarning500, dark: ColorWarning700 },
