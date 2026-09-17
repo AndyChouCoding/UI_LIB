@@ -49,6 +49,8 @@ export const FIGMA_LINKS: Record<string, string> = {
   Container: '',
   Grid: '',
   Stack: '',
+  DataGrid: '',
+  DatePicker: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
