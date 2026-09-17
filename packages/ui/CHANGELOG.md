@@ -7,6 +7,7 @@
 - MUI Data Display 分類薄封裝：Avatar（+ AvatarGroup）、Badge、Chip、Divider、List（+ ListItem/ListItemButton/ListItemIcon/ListItemText/ListItemAvatar/ListSubheader）、Typography
 - MUI Feedback 分類薄封裝：Alert（+ AlertTitle）、CircularProgress、LinearProgress、Skeleton、Snackbar（+ SnackbarContent）
 - MUI Surfaces 分類薄封裝：Accordion（+ AccordionSummary/AccordionDetails/AccordionActions）、AppBar、Card（+ CardActionArea/CardActions/CardContent/CardHeader/CardMedia）、Paper、Toolbar
+- MUI Navigation 分類薄封裝：Breadcrumbs、Drawer、Link、Menu（+ MenuList，MenuItem 沿用 Select 既有匯出）、Pagination、Popover、Stepper（+ Step/StepLabel/StepContent/StepButton/StepIcon/StepConnector）
 - 9 個 Company Component（MUI implementation layer，封裝後以 Company Component API 對外暴露）：
   - Button
   - Input

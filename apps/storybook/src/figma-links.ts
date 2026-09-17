@@ -38,6 +38,13 @@ export const FIGMA_LINKS: Record<string, string> = {
   Card: '',
   Paper: '',
   Toolbar: '',
+  Breadcrumbs: '',
+  Drawer: '',
+  Link: '',
+  Menu: '',
+  Pagination: '',
+  Popover: '',
+  Stepper: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
