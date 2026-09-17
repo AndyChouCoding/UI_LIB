@@ -62,5 +62,5 @@ npm run build --workspace=packages/tokens
 
 - **Phase 1（完成）**：Color token PoC，驗證 Figma → Style Dictionary → CSS 可行
 - **Phase 2（完成）**：`packages/tokens` Primitive/Semantic 分層，準備發布 `@andychoucoding/tokens@1.0.0`
-- **Phase 3/4（目前）**：`packages/ui`（Company MUI Theme + 9 個元件：Button/Input/Select/Checkbox/Switch/Dialog/Table/Tabs/Tooltip）、`apps/storybook`（含 Figma 連結預留欄位）
-- **Phase 5+（規劃中）**：`@andychoucoding/ui` 正式發布、CI 治理（lint/typecheck/test/visual regression）、其他元件與 semantic token 類別擴充
+- **Phase 3/4（目前）**：`packages/ui`（Company MUI Theme + ~35 個元件，涵蓋 MUI Inputs/Data Display/Feedback/Surfaces/Navigation/Layout 六大分類，細節見 [`packages/ui/README.md`](packages/ui/README.md)）、`apps/storybook`（含 Figma 連結預留欄位）
+- **Phase 5+（規劃中）**：`@andychoucoding/ui` 正式發布、CI 治理（lint/typecheck/test/visual regression）、semantic token 類別擴充
