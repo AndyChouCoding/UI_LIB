@@ -14,7 +14,7 @@ MUI (pinned to 9.4.0)
 
 目前建了架構文件 Phase 4 列的 9 個元件：`Button` / `Input` / `Select` / `Checkbox` / `Switch` / `Dialog` / `Table` / `Tabs` / `Tooltip`。
 
-- **Button** 是完整範例：`variant`（`primary` / `secondary` / `danger` / `ghost`）由 Company 決定要對應 MUI 的哪個 `variant` + `color` 組合（見 `src/Button/Button.tsx`），product 端不需要知道 MUI 的 contained/outlined/text 語彙。
+- **Button** 是完整範例：`variant`（`primary` / `secondary` / `danger` / `text`）由 Company 決定要對應 MUI 的哪個 `variant` + `color` 組合（見 `src/Button/Button.tsx`），product 端不需要知道 MUI 的 contained/outlined/text 語彙。
 - 其餘 8 個目前是**薄封裝**（直接轉發到對應的 MUI 元件），還沒有 Company 專屬的 variant/size/state 系統——doc 裡只有 Button 給了明確規格，其他元件的 API 等實際 product 需求或設計稿出來後再擴充，避免先發明一套沒人用得到的規格。
 
 ## Company Theme
