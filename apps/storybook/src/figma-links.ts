@@ -45,6 +45,10 @@ export const FIGMA_LINKS: Record<string, string> = {
   Pagination: '',
   Popover: '',
   Stepper: '',
+  Box: '',
+  Container: '',
+  Grid: '',
+  Stack: '',
 };
 
 export function figmaDesignParam(component: keyof typeof FIGMA_LINKS) {
