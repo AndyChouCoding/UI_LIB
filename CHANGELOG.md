@@ -2,21 +2,18 @@
 
 All notable changes to the `UI_LIB` monorepo as a whole are documented here.
 Package-level details live in each package's own CHANGELOG
-(`packages/tokens/CHANGELOG.md`).
+(`packages/tokens/CHANGELOG.md`, `packages/ui/CHANGELOG.md`).
 
 ## [Unreleased]
 ### Added
-- `packages/ui`（`@andychoucoding/ui`）：Company Theme（MUI）+ 9 個元件 — Button / Input / Select / Checkbox / Switch / Dialog / Table / Tabs / Tooltip
-- `apps/storybook`：對應 9 個元件的 Storybook stories，含 Colors foundation story 與 Figma 連結預留欄位（`figma-links.ts`）
+### Fixed
+### Changed
+
+## [v1.1.0] - 2026-09-17
+### Added
+- `packages/ui`（`@andychoucoding/ui`）：Company Theme（MUI）+ 45 個元件，涵蓋 MUI Inputs / Data Display / Feedback / Surfaces / Navigation / Layout 六大分類，以及 MUI X Community（免費）的 DataGrid、DatePicker/TimePicker/DateTimePicker——完整清單見 [`packages/ui/CHANGELOG.md`](packages/ui/CHANGELOG.md)
+- `apps/storybook`：對應每個元件的 Storybook stories，含 Colors foundation story 與 Figma 連結預留欄位（`figma-links.ts`）
 - Root `package.json` 接上 npm workspaces（`packages/*`、`apps/*`），monorepo 可統一安裝與建置
-- `apps/storybook`：Button story 加上 startIcon / endIcon 的可選 icon 控制項（`@mui/icons-material`）
-- `packages/ui` + `apps/storybook`：補齊 MUI Inputs 分類元件——Autocomplete、Fab、IconButton、Radio（+ RadioGroup）、Rating、Slider、ToggleButton（+ ToggleButtonGroup），各附 Storybook story
-- `packages/ui` + `apps/storybook`：補齊 MUI Data Display 分類元件——Avatar（+ AvatarGroup）、Badge、Chip、Divider、List 系列、Typography，各附 Storybook story
-- `packages/ui` + `apps/storybook`：補齊 MUI Feedback 分類元件——Alert（+ AlertTitle）、CircularProgress、LinearProgress、Skeleton、Snackbar（+ SnackbarContent），各附 Storybook story
-- `packages/ui` + `apps/storybook`：補齊 MUI Surfaces 分類元件——Accordion 系列、AppBar、Card 系列、Paper、Toolbar，各附 Storybook story
-- `packages/ui` + `apps/storybook`：補齊 MUI Navigation 分類元件——Breadcrumbs、Drawer、Link、Menu、Pagination、Popover、Stepper 系列，各附 Storybook story
-- `packages/ui` + `apps/storybook`：補齊 MUI Layout 分類元件——Box、Container、Grid、Stack，各附 Storybook story（至此已涵蓋 ~35 個 MUI 核心元件）
-- `packages/ui` + `apps/storybook`：新增 MUI X Community（免費）元件——DataGrid、DatePicker/TimePicker/DateTimePicker，各附 Storybook story
 
 ### Fixed
 
