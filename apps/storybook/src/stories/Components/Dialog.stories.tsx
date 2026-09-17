@@ -22,7 +22,7 @@ export const Default: Story = {
           <DialogTitle>Dialog title</DialogTitle>
           <DialogContent>Dialog content goes here.</DialogContent>
           <DialogActions>
-            <Button variant="ghost" onClick={() => setOpen(false)}>
+            <Button variant="text" onClick={() => setOpen(false)}>
               Cancel
             </Button>
             <Button onClick={() => setOpen(false)}>Confirm</Button>

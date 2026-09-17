@@ -1,0 +1,38 @@
+# Changelog
+
+## [Unreleased]
+### Added
+### Fixed
+### Changed
+
+## [v1.0.0] - 2026-09-17
+### Added
+- Company Theme：以 `@andychoucoding/tokens` 為基礎的 MUI theme（`src/theme/theme.ts`、`src/theme/palette.ts`）
+- MUI Inputs 分類薄封裝：Autocomplete、Fab、IconButton、Radio（+ RadioGroup）、Rating、Slider、ToggleButton（+ ToggleButtonGroup）
+- MUI Data Display 分類薄封裝：Avatar（+ AvatarGroup）、Badge、Chip、Divider、List（+ ListItem/ListItemButton/ListItemIcon/ListItemText/ListItemAvatar/ListSubheader）、Typography
+- MUI Feedback 分類薄封裝：Alert（+ AlertTitle）、CircularProgress、LinearProgress、Skeleton、Snackbar（+ SnackbarContent）
+- MUI Surfaces 分類薄封裝：Accordion（+ AccordionSummary/AccordionDetails/AccordionActions）、AppBar、Card（+ CardActionArea/CardActions/CardContent/CardHeader/CardMedia）、Paper、Toolbar
+- MUI Navigation 分類薄封裝：Breadcrumbs、Drawer、Link、Menu（+ MenuList，MenuItem 沿用 Select 既有匯出）、Pagination、Popover、Stepper（+ Step/StepLabel/StepContent/StepButton/StepIcon/StepConnector）
+- MUI Layout 分類薄封裝：Box、Container、Grid、Stack（皆為 polymorphic `component` prop 元件，直接 alias 匯出以保留 root element 泛型型別，同 Autocomplete 的作法）
+- MUI X（Community 版，MIT 授權免費）薄封裝：DataGrid、DatePicker/TimePicker/DateTimePicker（+ LocalizationProvider、AdapterDayjs），新增 `dayjs` 作為日期處理依賴
+- 9 個 Company Component（MUI implementation layer，封裝後以 Company Component API 對外暴露）：
+  - Button
+  - Input
+  - Select
+  - Checkbox
+  - Switch
+  - Dialog
+  - Table
+  - Tabs
+  - Tooltip
+- 建置設定：`tsup` 輸出 ESM + CJS + `.d.ts`（`dist/`）
+
+### Fixed
+
+### Changed
+- Palette：primary `main` 改用 800 階（原本 500），`light`/`dark` 同步調整為 300/900，維持 light < main < dark 的深淺順序
+- **Breaking**：`Button` 的 `variant` 選項 `ghost` 改名為 `text`（對齊 MUI 底層的 `text` variant 語彙）
+
+### Known limitations
+- 尚未正式發布到 GitHub Packages（`publishConfig.registry` 已設定，尚未 release）
+- 尚未建立元件測試 / visual regression 驗證

@@ -1,7 +1,7 @@
 import { forwardRef } from 'react';
 import MuiButton, { type ButtonProps as MuiButtonProps } from '@mui/material/Button';
 
-export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'ghost';
+export type ButtonVariant = 'primary' | 'secondary' | 'danger' | 'text';
 export type ButtonSize = 'small' | 'medium' | 'large';
 
 export interface ButtonProps extends Omit<MuiButtonProps, 'variant' | 'color' | 'size'> {
@@ -13,7 +13,7 @@ const VARIANT_MAP: Record<ButtonVariant, Pick<MuiButtonProps, 'variant' | 'color
   primary: { variant: 'contained', color: 'primary' },
   secondary: { variant: 'outlined', color: 'primary' },
   danger: { variant: 'contained', color: 'error' },
-  ghost: { variant: 'text', color: 'primary' },
+  text: { variant: 'text', color: 'primary' },
 };
 
 /**
