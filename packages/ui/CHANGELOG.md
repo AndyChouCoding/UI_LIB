@@ -19,6 +19,7 @@
 
 ### Changed
 - Palette：primary `main` 改用 800 階（原本 500），`light`/`dark` 同步調整為 300/900，維持 light < main < dark 的深淺順序
+- **Breaking**：`Button` 的 `variant` 選項 `ghost` 改名為 `text`（對齊 MUI 底層的 `text` variant 語彙）
 
 ### Known limitations
 - 尚未正式發布到 GitHub Packages（`publishConfig.registry` 已設定，尚未 release）

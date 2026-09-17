@@ -23,7 +23,7 @@ const meta: Meta<typeof Button> = {
   component: Button,
   parameters: { design: figmaDesignParam('Button') },
   argTypes: {
-    variant: { control: 'select', options: ['primary', 'secondary', 'danger', 'ghost'] },
+    variant: { control: 'select', options: ['primary', 'secondary', 'danger', 'text'] },
     size: { control: 'select', options: ['small', 'medium', 'large'] },
     startIcon: { control: 'select', options: Object.keys(ICON_OPTIONS), mapping: ICON_OPTIONS },
     endIcon: { control: 'select', options: Object.keys(ICON_OPTIONS), mapping: ICON_OPTIONS },
@@ -37,7 +37,7 @@ type Story = StoryObj<typeof Button>;
 export const Primary: Story = { args: { variant: 'primary' } };
 export const Secondary: Story = { args: { variant: 'secondary' } };
 export const Danger: Story = { args: { variant: 'danger' } };
-export const Ghost: Story = { args: { variant: 'ghost' } };
+export const Text: Story = { args: { variant: 'text' } };
 
 export const Small: Story = { args: { size: 'small' } };
 export const Medium: Story = { args: { size: 'medium' } };

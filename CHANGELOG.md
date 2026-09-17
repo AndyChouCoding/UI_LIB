@@ -15,6 +15,7 @@ Package-level details live in each package's own CHANGELOG
 
 ### Changed
 - `packages/ui`：primary palette `main` 改用 800 階（原本 500）
+- `packages/ui`：`Button` 的 `variant` 選項 `ghost` 改名為 `text`（breaking change）
 
 ## [v1.0.0] - 2026-09-14
 ### Added
