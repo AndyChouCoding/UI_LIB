@@ -6,6 +6,11 @@ Package-level details live in each package's own CHANGELOG
 
 ## [Unreleased]
 ### Added
+### Fixed
+### Changed
+
+## [v1.1.1] - 2026-10-05
+### Added
 - 根目錄新增 `vercel.json`：Vercel 依序 build tokens → ui → Storybook 並部署 `apps/storybook/storybook-static`；README 補上 Vercel 專案設定說明
 ### Fixed
 ### Changed
