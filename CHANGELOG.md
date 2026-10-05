@@ -9,6 +9,12 @@ Package-level details live in each package's own CHANGELOG
 ### Fixed
 ### Changed
 
+## [v1.1.1] - 2026-10-05
+### Added
+- 根目錄新增 `vercel.json`：Vercel 依序 build tokens → ui → Storybook 並部署 `apps/storybook/storybook-static`；README 補上 Vercel 專案設定說明
+### Fixed
+### Changed
+
 ## [v1.1.0] - 2026-09-17
 ### Added
 - `packages/ui`（`@andychoucoding/ui`）：Company Theme（MUI）+ 45 個元件，涵蓋 MUI Inputs / Data Display / Feedback / Surfaces / Navigation / Layout 六大分類，以及 MUI X Community（免費）的 DataGrid、DatePicker/TimePicker/DateTimePicker——完整清單見 [`packages/ui/CHANGELOG.md`](packages/ui/CHANGELOG.md)

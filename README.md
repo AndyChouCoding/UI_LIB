@@ -56,6 +56,17 @@ npm install                              # 安裝所有 workspace 的依賴
 npm run build --workspace=packages/tokens
 ```
 
+## 部署（Vercel）
+
+Storybook 以靜態網站部署到 Vercel，設定寫在根目錄 [`vercel.json`](vercel.json)：依序 build `packages/tokens` → `packages/ui` → `apps/storybook`，輸出 `apps/storybook/storybook-static`。
+
+Vercel 專案設定：
+
+- **Root Directory**：留空（repo 根目錄），`npm ci` 才能解析 workspace 套件
+- **Framework Preset**：Other
+- **Node.js Version**：22.x
+- **Production Branch**：`main`（其他分支與 PR 會產生 Preview 部署）
+
 ## 現況（Roadmap）
 
 對應公司 design system 架構文件的階段規劃：
